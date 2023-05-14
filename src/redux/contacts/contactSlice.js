@@ -16,9 +16,7 @@ export const contactSlice = createSlice({
       if(action.payload.name.includes(state.contacts)) {
     return null
       } 
-      else {
       state.contacts.push(action.payload)
-      }
     },
     dltContact(state, action) {
       const deletedContacts = state.contacts.filter(
