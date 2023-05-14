@@ -14,12 +14,12 @@ export const contactSlice = createSlice({
   reducers: {
     addUser(state, action) { 
       if(action.payload.name === state.contacts.name) {
-        return null
+        return state.contacts
       } 
-   else {
-      state.contacts.push(action.payload)
-   }
-    },
+      else if(action.payload.name !== state.contacts.name) {
+  state.contacts.push(action.payload)
+}
+ },
     dltContact(state, action) {
       const deletedContacts = state.contacts.filter(
         item => item.id !== action.payload
