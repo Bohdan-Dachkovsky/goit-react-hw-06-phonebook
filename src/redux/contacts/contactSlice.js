@@ -14,7 +14,7 @@ export const contactSlice = createSlice({
   reducers: {
     addUser(state, action) { 
       console.log(action.payload.name)
-      if(state.contacts.name.includes(action.payload.name)) {
+      if(action.payload.name.includes(state.contacts.name)) {
         return 
       } 
    else {
