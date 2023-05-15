@@ -32,7 +32,7 @@ export default function ContactList() {
     contact.name
       .toString()
       .toLowerCase()
-      .includes(filtered.toString().toLowerCase()) 
+      .includes(...filtered.toString().toLowerCase()) 
   );
   return (
     <TaskList>

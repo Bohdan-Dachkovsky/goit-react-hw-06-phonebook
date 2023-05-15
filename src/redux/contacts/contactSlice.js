@@ -30,7 +30,7 @@ export const contactSlice = createSlice({
     },
     searchContacts(state, action) {
       console.log(action.payload)
-      state.filter.push(action.payload);
+       state.filter = action.payload;
     },
   },
 });
