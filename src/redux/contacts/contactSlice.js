@@ -29,8 +29,8 @@ export const contactSlice = createSlice({
       }
     },
     searchContacts(state, action) {
-      state.filter = action.payload;
-    },
+      state.filter = action.payload
+        },
   },
 });
 
