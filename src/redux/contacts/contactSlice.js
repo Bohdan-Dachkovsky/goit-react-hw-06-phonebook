@@ -9,7 +9,7 @@ export const contactSlice = createSlice({
       { id: 3, name: 'Boris Bankli', number: '095-4543-344' },
       { id: 4, name: 'Eden Clements', number: '095-35434-905' },
     ],
-    filter: '',
+    filter: [],
   },
   reducers: {
     addUser(state, action) { 
@@ -30,7 +30,7 @@ export const contactSlice = createSlice({
     },
     searchContacts(state, action) {
       console.log(action.payload)
-      state.filter = action.payload;
+      state.filter.push(action.payload);
     },
   },
 });
