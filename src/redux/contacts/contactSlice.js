@@ -13,7 +13,7 @@ export const contactSlice = createSlice({
   },
   reducers: {
     addUser(state, action) { 
-        state.contacts.push(action.payload)
+        state.contacts =action.payload 
 
  },
     dltContact(state, action) {
