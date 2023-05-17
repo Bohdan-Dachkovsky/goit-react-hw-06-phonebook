@@ -33,7 +33,7 @@ export const contactSlice = createSlice({
         },
   },
 });
-process.exist(1)
+
 export const {
   addUser,
   dltContact,
