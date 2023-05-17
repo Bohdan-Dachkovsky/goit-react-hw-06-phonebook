@@ -28,11 +28,14 @@ export default function ContactList() {
   const contacts = useSelector(selectedPerson);
   const dispatch = useDispatch();
   const filtered = useSelector(filteredContacts);
+  console.log(contacts)
+
+ 
   const contactsName = [...contacts].filter(contact =>
     contact.name
       .toString()
       .toLowerCase()
-      .includes(...filtered.toString().toLowerCase()) 
+      .includes(filtered.toString().toLowerCase()) 
   );
   return (
     <TaskList>
@@ -42,7 +45,7 @@ export default function ContactList() {
       </li>
 
       {contactsName?.length ? (
-        contacts.map((contact, idx, arr) => (
+       contacts.map((contact, idx, arr) => (
           <List key={contact.id}>
             {contact.name + ':' + contact.number}
 
