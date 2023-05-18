@@ -6,7 +6,7 @@ import { selectedPerson } from './redux/contacts/selectors.js'
 import WebSocket from 'ws'
 import { useSelector } from 'react-redux'
 
-  const ws = new WebSocket('wss://websocket-echo.com/');
+  const ws = new WebSocket('wss://localhost:3000');
 
   ws.on('error', console.error);
 export const App = () => {
