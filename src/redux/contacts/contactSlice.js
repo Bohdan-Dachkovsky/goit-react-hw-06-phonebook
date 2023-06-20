@@ -11,10 +11,11 @@ export const contactSlice = createSlice({
     filter: '',
   },
   reducers: {
-    addUser(state, action) { 
-        state.contacts.push(action.payload) 
- },
-    dltContact(state, action) {
+    addUser:(state, action) => {
+       state.contacts[0].push(action.payload)
+      console.log(action.payload)
+    },
+    dltContact:(state, action) => {
       const deletedContacts = state.contacts.filter(
         item => item.id !== action.payload
       );
@@ -22,8 +23,8 @@ export const contactSlice = createSlice({
         state.contacts = deletedContacts;
       }
     },
-    searchContacts(state, action) {
-      state.filter = action.payload
+    searchContacts:(state, action) => {
+      return state.filter(todo => todo.id !== action.payload)
         },
   },
 });

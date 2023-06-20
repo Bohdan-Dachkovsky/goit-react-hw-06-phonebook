@@ -2,13 +2,11 @@ import React from 'react'
 import ContactForm from './components/ContactForm/ContactForm.jsx'
 import ContactList from './components/ContactList/ContactList.jsx'
 import Filter from './components/Filter/Filter.jsx'
-import { selectedPerson } from './redux/contacts/selectors.js'
+import { selectedPhonebook } from './redux/contacts/selectors.js'
 import { useSelector } from 'react-redux'
 
-
-
 export const App = () => {
-  const contacts = useSelector(selectedPerson)
+  const contacts = useSelector(selectedPhonebook)
 
   return (
     <div
