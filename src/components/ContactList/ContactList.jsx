@@ -28,7 +28,7 @@ export default function ContactList() {
   const contacts = useSelector(selectedPerson);
   const dispatch = useDispatch();
   const filtered = useSelector(filteredContacts);
-  console.log(contacts)
+ 
 
  
   const contactsName = [contacts].filter(contact =>
