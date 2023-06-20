@@ -12,7 +12,7 @@ export const contactSlice = createSlice({
   },
   reducers: {
     addUser:(state, action) => {
-       state.contacts[0].push(action.payload)
+       state.contacts.push(action.payload)
       console.log(action.payload)
     },
     dltContact:(state, action) => {
