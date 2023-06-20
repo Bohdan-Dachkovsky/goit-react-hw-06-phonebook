@@ -31,7 +31,7 @@ export default function ContactList() {
   console.log(contacts)
 
  
-  const contactsName = [...contacts].filter(contact =>
+  const contactsName = [contacts].filter(contact =>
     contact.name
       .toString()
       .toLowerCase()
@@ -45,7 +45,7 @@ export default function ContactList() {
       </li>
 
       {contactsName?.length ? (
-       contacts.map((contact, idx, arr) => (
+       [contacts].map((contact, idx, arr) => (
           <List key={contact.id}>
             {contact.name + ':' + contact.number}
 

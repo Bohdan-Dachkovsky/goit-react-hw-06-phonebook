@@ -9,6 +9,7 @@ import { useSelector } from 'react-redux'
 
 export const App = () => {
   const contacts = useSelector(selectedPerson)
+
   return (
     <div
       style={{
