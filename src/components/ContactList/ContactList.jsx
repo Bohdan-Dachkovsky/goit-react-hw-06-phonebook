@@ -32,7 +32,7 @@ export default function ContactList() {
 
  
   const contactsName = [contacts].filter(contact =>
-    contact.name
+    contact?.name
       .toString()
       .toLowerCase()
       .includes(filtered.toString().toLowerCase()) 
