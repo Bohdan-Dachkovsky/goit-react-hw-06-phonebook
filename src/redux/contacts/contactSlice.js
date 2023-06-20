@@ -22,14 +22,17 @@ export const contactSlice = createSlice({
       const deletedContacts = state.contacts.filter(
         item => item.id !== action.payload
       );
-      console.log(state[0])
-      if (state.contacts?.id ?? true) {
+      if (state.contacts?.id) {
+
         state.contacts = deletedContacts;
+
       }
     },
-    searchContacts:(state, action) => {
+    searchContacts(state, action) {
+
       return state.filter(todo => todo.id !== action.payload)
-        },
+      
+    },
   },
 });
 

@@ -44,7 +44,7 @@ export default function ContactList() {
         {!contacts.length < 0 ? <p>No data contacts!</p> : undefined}
       </li>
 
-      {contactsName?.length ? (
+      {contactsName?.length > 0 ? (
        [contacts].map((contact, idx, arr) => (
           <List key={idx}>
             {contact.name + ':' + contact.number}
