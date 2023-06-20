@@ -29,7 +29,6 @@ export default function ContactList() {
   const dispatch = useDispatch();
   const filtered = useSelector(filteredContacts);
  
-
  
   const contactsName = [...contacts].filter(contact =>
     contact?.name.toString()
@@ -43,7 +42,7 @@ export default function ContactList() {
         <h2>Contacts</h2>
         {!contacts.length < 0 ? <p>No data contacts!</p> : undefined}
       </li>
-
+      
       {contactsName?.length > 0 ? (
        [contacts].map((contact, idx, arr) => (
           <List key={idx}>
