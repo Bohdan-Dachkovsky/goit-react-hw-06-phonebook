@@ -40,11 +40,11 @@ export default function ContactList() {
     <TaskList>
       <li>
         <h2>Contacts</h2>
-        {!contacts.length < 0 ? <p>No data contacts!</p> : undefined}
+        {!contacts.length ? <p>No data contacts!</p> : undefined}
       </li>
       
       {contactsName?.length > 0 ? (
-       [contacts].map((contact, idx, arr) => (
+       [...contacts].map((contact, idx, arr) => (
           <List key={idx}>
             {contact.name + ':' + contact.number}
 

@@ -21,7 +21,7 @@ export const App = () => {
     >
       <h1>Phonebook</h1>
       <ContactForm />
-      {contacts?.length && <Filter />}
+      {contacts?.length > 0 ? <Filter /> : 'Write contact please!'}
       <ContactList />
     </div>
   )

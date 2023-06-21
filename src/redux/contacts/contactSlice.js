@@ -14,7 +14,7 @@ export const contactSlice = createSlice({
   initialState,
   reducers: {
     addUser:(state, action) => {
-   return { ...state, contacts: [action.payload], filter: ''
+   return { ...state, contacts: [...state.contacts, action.payload], filter: ''
    } 
     }
     ,
