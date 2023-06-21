@@ -22,16 +22,10 @@ export const contactSlice = createSlice({
       const deletedContacts = state.contacts.filter(
         item => item.id !== action.payload
       );
-      if (state.contacts?.id) {
-
-        state.contacts = deletedContacts;
-
-      }
+      state.contacts = deletedContacts;
     },
     searchContacts(state, action) {
-
-      return state.filter(todo => todo.id !== action.payload)
-      
+      state.contacts = state.contacts.filter(todo => todo.name === action.payload)
     },
   },
 });
