@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { filteredContacts } from '../../redux/findByName/selectors.js';
+import { filteredContacts } from '../../redux/contacts/selectors.js';
 import styled from 'styled-components';
 import { dltContact } from '../../redux/contacts/contactSlice.js';
 import { selectedPerson } from '../../redux/contacts/selectors.js';
@@ -25,15 +25,14 @@ const Button = styled.button`
   margin-left: 4px;
 `;
 export default function ContactList() {
-  const contacts = useSelector(selectedPerson);
   const dispatch = useDispatch();
+  const contacts = useSelector(selectedPerson);
   const filtered = useSelector(filteredContacts);
  
  
   const contactsName = [...contacts].filter(contact =>
-    contact?.name.toString()
-      .toLowerCase()
-      .includes(filtered.toString().toLowerCase(), console.log(contact.name)) 
+    contact?.name.toLowerCase()
+      .includes(filtered.toLowerCase()) 
       
   );
   return (
@@ -44,7 +43,7 @@ export default function ContactList() {
       </li>
       
       {contactsName?.length > 0 ? (
-       [...contacts].map((contact, idx, arr) => (
+       [...contactsName].map((contact, idx, arr) => (
           <List key={idx}>
             {contact.name + ':' + contact.number}
 

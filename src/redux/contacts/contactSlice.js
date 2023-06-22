@@ -25,7 +25,7 @@ export const contactSlice = createSlice({
       state.contacts = deletedContacts;
     },
     searchContacts(state, action) {
-      state.contacts = state.contacts.filter(todo => todo.name === action.payload)
+      state.filter = action.payload
     },
   },
 });
